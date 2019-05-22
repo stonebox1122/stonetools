@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="51.5" y="157.0">com.stone.abstractfactory01.TyreFactory</node>
+    <node x="56.5" y="0.0">com.stone.abstractfactory01.EngineFactory</node>
+    <node x="0.0" y="81.0">com.stone.abstractfactory01.LowEngine</node>
+    <node x="261.0" y="157.0">com.stone.abstractfactory01.CarFactory</node>
+    <node x="120.0" y="238.0">com.stone.abstractfactory01.LowTyre</node>
+    <node x="0.0" y="238.0">com.stone.abstractfactory01.HighTyre</node>
+    <node x="0.0" y="314.0">com.stone.abstractfactory01.AbstractFactoryTest</node>
+    <node x="268.5" y="238.0">com.stone.abstractfactory01.HighCar</node>
+    <node x="130.0" y="81.0">com.stone.abstractfactory01.HighEngine</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.stone.abstractfactory01.LowEngine" target="com.stone.abstractfactory01.EngineFactory">
+      <point x="0.0" y="-15.5" />
+      <point x="55.0" y="56.0" />
+      <point x="88.75" y="56.0" />
+      <point x="-32.25" y="15.5" />
+    </edge>
+    <edge source="com.stone.abstractfactory01.HighTyre" target="com.stone.abstractfactory01.TyreFactory">
+      <point x="0.0" y="-15.5" />
+      <point x="50.0" y="213.0" />
+      <point x="80.25" y="213.0" />
+      <point x="-28.75" y="15.5" />
+    </edge>
+    <edge source="com.stone.abstractfactory01.HighEngine" target="com.stone.abstractfactory01.EngineFactory">
+      <point x="0.0" y="-15.5" />
+      <point x="187.0" y="56.0" />
+      <point x="153.25" y="56.0" />
+      <point x="32.25" y="15.5" />
+    </edge>
+    <edge source="com.stone.abstractfactory01.HighCar" target="com.stone.abstractfactory01.CarFactory">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.stone.abstractfactory01.LowTyre" target="com.stone.abstractfactory01.TyreFactory">
+      <point x="0.0" y="-15.5" />
+      <point x="168.0" y="213.0" />
+      <point x="137.75" y="213.0" />
+      <point x="28.75" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="326.5" y="121.5" />
+  <SelectedNodes>
+    <node>com.stone.abstractfactory01.LowEngine</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

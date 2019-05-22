@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="157.0">com.stone.build01.BuilderTest</node>
+    <node x="118.0" y="233.0">com.stone.build01.Car</node>
+    <node x="0.0" y="81.0">com.stone.build01.AudiDirector</node>
+    <node x="166.0" y="81.0">com.stone.build01.AudiBuilder</node>
+    <node x="3.0" y="0.0">com.stone.build01.CarDirector</node>
+    <node x="158.0" y="157.0">com.stone.build01.Engine</node>
+    <node x="0.0" y="233.0">com.stone.build01.Tyre</node>
+    <node x="169.0" y="0.0">com.stone.build01.CarBuilder</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.stone.build01.AudiBuilder" target="com.stone.build01.CarBuilder">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.stone.build01.AudiDirector" target="com.stone.build01.CarDirector">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="159.5" y="147.0" />
+  <SelectedNodes>
+    <node>com.stone.build01.Tyre</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
