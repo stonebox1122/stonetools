@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="0.0">com.stone.designpattern.adapter.Adaptee</node>
+    <node x="38.03869047619047" y="81.0">com.stone.designpattern.adapter.Adapter</node>
+    <node x="21.788690476190467" y="162.0">com.stone.designpattern.adapter.Client</node>
+    <node x="116.99999999999999" y="0.0">com.stone.designpattern.adapter.Target</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.stone.designpattern.adapter.Adapter" target="com.stone.designpattern.adapter.Target">
+      <point x="31.66666666666667" y="-15.5" />
+      <point x="117.20535714285714" y="56.0" />
+      <point x="138.5" y="56.0" />
+      <point x="-21.5" y="15.5" />
+    </edge>
+    <edge source="com.stone.designpattern.adapter.Adapter" target="com.stone.designpattern.adapter.Adaptee">
+      <point x="-31.666666666666657" y="-15.5" />
+      <point x="53.87202380952381" y="56.0" />
+      <point x="60.625" y="56.0" />
+      <point x="12.125" y="15.5" />
+    </edge>
+    <edge source="com.stone.designpattern.adapter.Client" target="com.stone.designpattern.adapter.Target">
+      <point x="32.0" y="-15.5" />
+      <point x="93.78869047619047" y="142.0" />
+      <point x="175.0654761904762" y="142.0" />
+      <point x="175.0654761904762" y="56.0" />
+      <point x="181.5" y="56.0" />
+      <point x="21.5" y="15.5" />
+    </edge>
+    <edge source="com.stone.designpattern.adapter.Client" target="com.stone.designpattern.adapter.Adaptee">
+      <point x="-16.0" y="-15.5" />
+      <point x="45.78869047619047" y="132.0" />
+      <point x="27.538690476190467" y="132.0" />
+      <point x="27.538690476190467" y="56.0" />
+      <point x="36.375" y="56.0" />
+      <point x="-12.125" y="15.5" />
+    </edge>
+    <edge source="com.stone.designpattern.adapter.Client" target="com.stone.designpattern.adapter.Adapter">
+      <point x="0.0" y="-15.5" />
+      <point x="-23.75" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="101.5" y="96.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
