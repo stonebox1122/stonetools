@@ -1,4 +1,6 @@
-package com.stone.datastructure;
+package com.stone.algorithm.sort;
+
+import com.stone.datastructure.queue.MyQueue;
 
 import java.util.Arrays;
 
@@ -34,7 +36,7 @@ public class Sort {
     }
 
     /**
-     * 快速排序，此方式是从右边开始找比基准数小的，找到后停止，然后替换左边当前下标的数，不是替换左边比基准数大的。
+     * 快速排序，此方式是先从右边开始找比基准数小的，找到后停止，然后替换左边当前下标的数，不是替换左边比基准数大的。
      * 5,6,4,7,3,2,9,1
      * 1,6,4,7,3,2,9,1
      * 1,6,4,7,3,2,9,6
@@ -82,7 +84,7 @@ public class Sort {
     }
 
     /**
-     * 快速排序，此方式是从右边开始找比基准数小的，找到后停止，然后从左边开始找比基准数大的，找到后停止，然后交互。
+     * 快速排序，此方式是先从右边开始找比基准数小的，找到后停止，然后从左边开始找比基准数大的，找到后停止，然后交互。
      * 5,6,4,7,3,2,9,1
      * 5,1,4,7,3,2,9,6
      * 5,1,4,2,3,7,9,6
@@ -403,6 +405,7 @@ public class Sort {
             arr[max] = arr[index];
             arr[index] = temp;
             // 交换位置后可能会破坏之前排好的堆，需要重新调整
+            System.out.println("---->" + Arrays.toString(arr));
             maxHeap(arr, size, max);
         }
     }
@@ -412,6 +415,28 @@ public class Sort {
      * 1.构建最大堆。
      * 2.选择顶，并与第0位置元素交换
      * 3.由于步骤2的的交换可能破环了最大堆的性质，第0不再是最大元素，需要调用maxHeap调整堆(沉降法)，如果需要重复步骤2
+     * [9, 6, 8, 7, 0, 1, 10, 4, 2]
+     * ---->[9, 6, 10, 7, 0, 1, 8, 4, 2]
+     * ---->[9, 7, 10, 6, 0, 1, 8, 4, 2]
+     * ---->[10, 7, 9, 6, 0, 1, 8, 4, 2]（构建成大顶堆，即第0个元素为最大值，）
+     * -->[2, 7, 9, 6, 0, 1, 8, 4, 10]（第0个元素和最后元素交换后的结果）
+     * ---->[9, 7, 2, 6, 0, 1, 8, 4, 10]
+     * ---->[9, 7, 8, 6, 0, 1, 2, 4, 10]（剩余元素再次构建成大顶堆，即第0个元素为剩余元素的最大值）
+     * -->[4, 7, 8, 6, 0, 1, 2, 9, 10]（第0个元素和倒数第2个元素交换后的结果）
+     * ---->[8, 7, 4, 6, 0, 1, 2, 9, 10]
+     * -->[2, 7, 4, 6, 0, 1, 8, 9, 10]
+     * ---->[7, 2, 4, 6, 0, 1, 8, 9, 10]
+     * ---->[7, 6, 4, 2, 0, 1, 8, 9, 10]
+     * -->[1, 6, 4, 2, 0, 7, 8, 9, 10]
+     * ---->[6, 1, 4, 2, 0, 7, 8, 9, 10]
+     * ---->[6, 2, 4, 1, 0, 7, 8, 9, 10]
+     * -->[0, 2, 4, 1, 6, 7, 8, 9, 10]
+     * ---->[4, 2, 0, 1, 6, 7, 8, 9, 10]
+     * -->[1, 2, 0, 4, 6, 7, 8, 9, 10]
+     * ---->[2, 1, 0, 4, 6, 7, 8, 9, 10]
+     * -->[0, 1, 2, 4, 6, 7, 8, 9, 10]
+     * ---->[1, 0, 2, 4, 6, 7, 8, 9, 10]
+     * -->[0, 1, 2, 4, 6, 7, 8, 9, 10]
      * @param arr
      */
     public static void heapSort(int[] arr){
@@ -427,32 +452,36 @@ public class Sort {
             int temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
+            System.out.println("-->" + Arrays.toString(arr));
+            // 交换后，除了第0个元素和最后1个元素，其余仍旧是大顶堆，故比较位置传入0即可。
+            // 即第0个位置与第1个和第2个位置进行比较，因为第1个位置和第2个位置分布是其剩余子树的最大值了。
             maxHeap(arr,i,0);
         }
     }
 
     public static void main(String[] args) {
-//        int[] arr = new int[]{5, 6, 4, 7, 3, 2, 9, 1};
+        int[] arr = new int[]{5, 6, 4, 7, 5, 2, 9, 1};
 //        int[] arr = new int[]{1,3,5,7,2,4,6,8};
-        int[] arr = new int[]{32, 6, 421, 75, 3, 219};
+//        int[] arr = new int[]{32, 6, 421, 75, 3, 219};
         System.out.println(Arrays.toString(arr));
 
 //        Sort.bubbleSort(arr);
 //        Sort.quickSort1(arr, 0, arr.length - 1);
-//        Sort.quickSort2(arr, 0, arr.length - 1);
+        Sort.quickSort2(arr, 0, arr.length - 1);
 //        Sort.insertSort(arr);
 //        Sort.shellSort(arr);
 //        Sort.selectSort(arr);
 //        Sort.merge(arr,0,2,arr.length-1);
 //        Sort.mergeSort(arr,0,arr.length-1);
 //        Sort.radixSort(arr);
-        Sort.radixQueueSort(arr);
+//        Sort.radixQueueSort(arr);
         System.out.println(Arrays.toString(arr));
 
-        int[] arr1 = new int[]{9,6,8,7,0,1,10,4,2};
-        System.out.println(Arrays.toString(arr1));
-        Sort.heapSort(arr1);
-        System.out.println(Arrays.toString(arr1));
+//        int[] arr1 = new int[]{9,6,8,7,0,1,10,4,2};
+//        int[] arr1 = new int[]{10,9,8,7,6,55,4,33,2,1,100,-1};
+//        System.out.println(Arrays.toString(arr1));
+//        Sort.heapSort(arr1);
+//        System.out.println(Arrays.toString(arr1));
 
     }
 }

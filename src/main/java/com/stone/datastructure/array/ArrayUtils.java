@@ -1,4 +1,4 @@
-package com.stone.datastructure;
+package com.stone.datastructure.array;
 
 import java.util.Arrays;
 
@@ -7,39 +7,32 @@ import java.util.Arrays;
  * @date 2019/6/3 18:48
  * description
  */
-public class MyArray {
-
-    private Object[] arr;
-
-    public MyArray() {
-        this.arr = new Object[0];
-    }
-
-    public MyArray(Object[] arr) {
-        this.arr = arr;
-    }
+public class ArrayUtils {
 
     /**
      * 数组长度
+     * @param arr 数组名称
      * @return
      */
-    public int getLength(){
+    public static int getLength(Object[] arr){
         return arr.length;
     }
 
     /**
      * 打印数组内容到控制台
+     * @param arr
      */
-    public void getAll(){
+    public static void getAll(Object[] arr){
         System.out.println(Arrays.toString(arr));
     }
 
     /**
      * 获取指定下标的元素
+     * @param arr
      * @param index
      * @return
      */
-    public Object getWithIndex(int index){
+    public static Object getWithIndex(Object[] arr, int index){
         if (index > arr.length - 1 || index < 0) {
             throw new RuntimeException("下标越界");
         }
@@ -48,10 +41,11 @@ public class MyArray {
 
     /**
      * 在数组末尾添加一个元素
+     * @param arr
      * @param element
      * @return
      */
-    public Object[] addToLast(Object element){
+    public static Object[] addToLast(Object[] arr, Object element){
         Object[] newArr = new Object[arr.length + 1];
         for (int i = 0; i < arr.length; i++) {
             newArr[i] = arr[i];
@@ -62,11 +56,12 @@ public class MyArray {
 
     /**
      * 在数组指定位置插入元素
+     * @param arr
      * @param element
      * @param index
      * @return
      */
-    public Object[] addWithIndex(Object element, int index){
+    public static Object[] addWithIndex(Object[] arr, Object element, int index){
         if (index > arr.length || index < 0) {
             throw new RuntimeException("下标越界");
         }
@@ -84,9 +79,10 @@ public class MyArray {
 
     /**
      * 删除数组最后一个元素
+     * @param arr
      * @return
      */
-    public Object[] deleteLast(){
+    public static Object[] deleteLast(Object[] arr){
         if (arr.length == 0){
             throw new RuntimeException("下标越界");
         }
@@ -99,10 +95,11 @@ public class MyArray {
 
     /**
      * 删除数组指定位置元素
+     * @param arr
      * @param index
      * @return
      */
-    public Object[] deleteWithIndex(int index){
+    public static Object[] deleteWithIndex(Object[] arr, int index){
         if (index > arr.length - 1 || index < 0) {
             throw new RuntimeException("下标越界");
         }
@@ -119,10 +116,11 @@ public class MyArray {
 
     /**
      * 线性查找指定元素
+     * @param arr
      * @param element
      * @return
      */
-    public int linearSearch(Object element){
+    public static int linearSearch(Object[] arr, Object element){
         int index = -1;
         for (int i = 0; i < arr.length; i++) {
             if (element.equals(arr[i])){
@@ -183,6 +181,14 @@ public class MyArray {
 
     public static void main(String[] args) {
         Object[] arr = new Object[]{"aa","bb","cc","dd"};
-
+        ArrayUtils.getAll(ArrayUtils.addToLast(arr, "ee"));
+        ArrayUtils.getAll(ArrayUtils.addWithIndex(arr,"ee",2));
+        ArrayUtils.getAll(ArrayUtils.deleteLast(arr));
+        ArrayUtils.getAll(ArrayUtils.deleteWithIndex(arr,2));
+        System.out.println(ArrayUtils.getWithIndex(arr, 2));
+        System.out.println(ArrayUtils.linearSearch(arr, "dd"));
+        int[] arr2 = new int[]{9,8,7,6,5,4,3};
+        System.out.println(Arrays.toString(ArrayUtils.sort(arr2)));
+        System.out.println(ArrayUtils.binarySearch(arr2, 10));
     }
 }

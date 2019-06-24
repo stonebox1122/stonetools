@@ -1,6 +1,4 @@
-package com.stone.datastructure;
-
-import java.util.Arrays;
+package com.stone.datastructure.queue;
 
 /**
  * @author stone

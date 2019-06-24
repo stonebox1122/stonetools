@@ -1,4 +1,4 @@
-package com.stone.datastructure;
+package com.stone.algorithm.recursion;
 
 /**
  * @author stone

@@ -1,4 +1,4 @@
-package com.stone.datastructure;
+package com.stone.datastructure.tree;
 
 /**
  * @author stone
