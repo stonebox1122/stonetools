@@ -3,52 +3,122 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="51.5" y="157.0">com.stone.abstractfactory01.TyreFactory</node>
-    <node x="56.5" y="0.0">com.stone.abstractfactory01.EngineFactory</node>
-    <node x="0.0" y="81.0">com.stone.abstractfactory01.LowEngine</node>
-    <node x="261.0" y="157.0">com.stone.abstractfactory01.CarFactory</node>
-    <node x="120.0" y="238.0">com.stone.abstractfactory01.LowTyre</node>
-    <node x="0.0" y="238.0">com.stone.abstractfactory01.HighTyre</node>
-    <node x="0.0" y="314.0">com.stone.abstractfactory01.AbstractFactoryTest</node>
-    <node x="268.5" y="238.0">com.stone.abstractfactory01.HighCar</node>
-    <node x="130.0" y="81.0">com.stone.abstractfactory01.HighEngine</node>
+    <node x="346.0" y="114.0">com.stone.designpattern.abstractfactory.CarFactory</node>
+    <node x="776.0" y="125.5">com.stone.designpattern.abstractfactory.LowTyre</node>
+    <node x="176.0" y="125.5">com.stone.designpattern.abstractfactory.HighTyre</node>
+    <node x="0.0" y="125.5">com.stone.designpattern.abstractfactory.HighEngine</node>
+    <node x="288.29375" y="0.0">com.stone.designpattern.abstractfactory.EngineFactory</node>
+    <node x="128.22083333333336" y="378.0">com.stone.designpattern.abstractfactory.AbstractFactoryTest</node>
+    <node x="562.4708333333333" y="251.0">com.stone.designpattern.abstractfactory.LowCar</node>
+    <node x="600.0" y="125.5">com.stone.designpattern.abstractfactory.LowEngine</node>
+    <node x="105.61250000000001" y="251.0">com.stone.designpattern.abstractfactory.HighCar</node>
+    <node x="607.79375" y="0.0">com.stone.designpattern.abstractfactory.TyreFactory</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.stone.abstractfactory01.LowEngine" target="com.stone.abstractfactory01.EngineFactory">
-      <point x="0.0" y="-15.5" />
-      <point x="55.0" y="56.0" />
-      <point x="88.75" y="56.0" />
-      <point x="-32.25" y="15.5" />
+    <edge source="com.stone.designpattern.abstractfactory.LowCar" target="com.stone.designpattern.abstractfactory.CarFactory">
+      <point x="-46.799999999999955" y="-38.5" />
+      <point x="632.6708333333333" y="211.0" />
+      <point x="521.5" y="211.0" />
+      <point x="58.5" y="38.5" />
     </edge>
-    <edge source="com.stone.abstractfactory01.HighTyre" target="com.stone.abstractfactory01.TyreFactory">
-      <point x="0.0" y="-15.5" />
-      <point x="50.0" y="213.0" />
-      <point x="80.25" y="213.0" />
-      <point x="-28.75" y="15.5" />
+    <edge source="com.stone.designpattern.abstractfactory.LowTyre" target="com.stone.designpattern.abstractfactory.TyreFactory">
+      <point x="0.0" y="-27.0" />
+      <point x="850.5" y="94.0" />
+      <point x="700.91875" y="94.0" />
+      <point x="18.625" y="27.0" />
     </edge>
-    <edge source="com.stone.abstractfactory01.HighEngine" target="com.stone.abstractfactory01.EngineFactory">
-      <point x="0.0" y="-15.5" />
-      <point x="187.0" y="56.0" />
-      <point x="153.25" y="56.0" />
-      <point x="32.25" y="15.5" />
+    <edge source="com.stone.designpattern.abstractfactory.HighCar" target="com.stone.designpattern.abstractfactory.HighEngine">
+      <point x="-87.60000000000002" y="-38.5" />
+      <point x="127.51249999999999" y="231.0" />
+      <point x="39.0" y="231.0" />
+      <point x="-39.0" y="27.0" />
     </edge>
-    <edge source="com.stone.abstractfactory01.HighCar" target="com.stone.abstractfactory01.CarFactory">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.abstractfactory.CarFactory" target="com.stone.designpattern.abstractfactory.EngineFactory">
+      <point x="-58.5" y="-38.5" />
+      <point x="404.5" y="74.0" />
+      <point x="385.79375" y="74.0" />
+      <point x="19.5" y="27.0" />
     </edge>
-    <edge source="com.stone.abstractfactory01.LowTyre" target="com.stone.abstractfactory01.TyreFactory">
-      <point x="0.0" y="-15.5" />
-      <point x="168.0" y="213.0" />
-      <point x="137.75" y="213.0" />
-      <point x="28.75" y="15.5" />
+    <edge source="com.stone.designpattern.abstractfactory.LowCar" target="com.stone.designpattern.abstractfactory.LowTyre">
+      <point x="46.799999999999955" y="-38.5" />
+      <point x="726.2708333333333" y="221.0" />
+      <point x="850.5" y="221.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.AbstractFactoryTest" target="com.stone.designpattern.abstractfactory.HighCar">
+      <point x="-43.25" y="-27.0" />
+      <point x="171.47083333333336" y="353.0" />
+      <point x="160.3625" y="353.0" />
+      <point x="-54.75" y="38.5" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.HighEngine" target="com.stone.designpattern.abstractfactory.EngineFactory">
+      <point x="0.0" y="-27.0" />
+      <point x="78.0" y="74.0" />
+      <point x="307.79375" y="74.0" />
+      <point x="-58.5" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.HighTyre" target="com.stone.designpattern.abstractfactory.TyreFactory">
+      <point x="0.0" y="-27.0" />
+      <point x="250.5" y="84.0" />
+      <point x="626.41875" y="84.0" />
+      <point x="-55.875" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.LowCar" target="com.stone.designpattern.abstractfactory.TyreFactory">
+      <point x="93.60000000000002" y="-38.5" />
+      <point x="773.0708333333334" y="231.0" />
+      <point x="935.5" y="231.0" />
+      <point x="935.5" y="84.0" />
+      <point x="738.16875" y="84.0" />
+      <point x="55.87500000000003" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.LowEngine" target="com.stone.designpattern.abstractfactory.EngineFactory">
+      <point x="0.0" y="-27.0" />
+      <point x="678.0" y="74.0" />
+      <point x="424.79375" y="74.0" />
+      <point x="58.5" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.HighCar" target="com.stone.designpattern.abstractfactory.CarFactory">
+      <point x="87.59999999999997" y="-38.5" />
+      <point x="302.7125" y="231.0" />
+      <point x="404.5" y="231.0" />
+      <point x="-58.5" y="38.5" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.LowCar" target="com.stone.designpattern.abstractfactory.LowEngine">
+      <point x="0.0" y="-38.5" />
+      <point x="679.4708333333333" y="231.0" />
+      <point x="678.0" y="231.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.HighCar" target="com.stone.designpattern.abstractfactory.HighTyre">
+      <point x="0.0" y="-38.5" />
+      <point x="215.1125" y="231.0" />
+      <point x="213.25" y="231.0" />
+      <point x="-37.25" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.LowCar" target="com.stone.designpattern.abstractfactory.EngineFactory">
+      <point x="-93.60000000000002" y="-38.5" />
+      <point x="585.8708333333334" y="221.0" />
+      <point x="335.5" y="221.0" />
+      <point x="335.5" y="74.0" />
+      <point x="346.79375" y="74.0" />
+      <point x="-19.5" y="27.0" />
+    </edge>
+    <edge source="com.stone.designpattern.abstractfactory.CarFactory" target="com.stone.designpattern.abstractfactory.TyreFactory">
+      <point x="58.5" y="-38.5" />
+      <point x="521.5" y="94.0" />
+      <point x="663.66875" y="94.0" />
+      <point x="-18.625" y="27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="326.5" y="121.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="400.0" y="213.0" />
   <SelectedNodes>
-    <node>com.stone.abstractfactory01.LowEngine</node>
+    <node>com.stone.designpattern.abstractfactory.LowEngine</node>
   </SelectedNodes>
-  <Categories />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>

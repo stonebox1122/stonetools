@@ -1,6 +1,9 @@
 package com.stone;
 
-import java.util.Arrays;
+import org.apache.commons.lang.StringUtils;
+
+import java.math.BigInteger;
+import java.util.*;
 
 /**
  * @author stone
@@ -87,10 +90,66 @@ public class Test {
         }
     }
 
+    public int removeDuplicates(int[] nums) {
+        Map<Integer,Integer> map = new LinkedHashMap<>();
+        for(int i=0;i<nums.length;i++){
+            map.put(nums[i],i);
+        }
+        int i=0;
+        for(Map.Entry<Integer,Integer> entry:map.entrySet()){
+            nums[i]=entry.getKey();
+            i++;
+        }
+        return i;
+    }
+
     public static void main(String[] args) {
         int[] arr1 = new int[]{9,6,8,7,0,1,10,4,2};
         System.out.println(Arrays.toString(arr1));
         Test.Sort(arr1,arr1.length-1);
         System.out.println(Arrays.toString(arr1));
+        String str = "abcd";
+        System.out.println(str.substring(0,4));
+
+        byte[] byteValue = {-81, -47, -49, -47, -49, -47, -55, -51, -57, 36, -24, -80, -3, 28, -60, -26, 28};
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < byteValue.length; i++) {
+            stringBuilder.append(StringUtils.leftPad(Integer.toBinaryString(byteValue[i] & 0xff), 8, '0'));
+        }
+        System.out.println(stringBuilder.toString());
+        System.out.println(new BigInteger(1, byteValue).toString(2));
+
+        int[] arr2 = new int[]{1,2,3,4,5,6,7};
+        rotate(arr2,3);
+
+        int[] arr3 = new int[]{99,99};
+        containsNearbyDuplicate(arr3,2);
+
+        List<Integer> list = new LinkedList<>();
+        list.size();
+    }
+
+    public static void rotate(int[] nums, int k) {
+        for(int i=1;i<=k;i++){
+            int temp =nums[nums.length-1];
+            for(int j= nums.length-1;j>0;j--){
+                nums[j]=nums[j-1];
+            }
+            nums[0]=temp;
+        }
+    }
+
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        int len=nums.length-1;
+        for(int i=0;i<=len;i++){
+            if(i+k<=len){
+                for(int j=i+1;j<=i+k;j++){
+                    if(nums[i]==nums[j]){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

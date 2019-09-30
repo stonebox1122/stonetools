@@ -8,13 +8,17 @@ public class SimpleFactoryTest {
 //        audi.run();
 //        benz.run();
 
-        // 使用简单工厂
-        Car audi1 = new SimpleFactory().getAudi();
-        Car benz1 = new SimpleFactory().getBenz();
+        // 使用简单工厂，方式1
+        Car audi = SimpleFactory.getCar("audi");
+        Car benz = SimpleFactory.getCar("benz");
+        audi.run();
+        benz.run();
+        System.out.println("============");
+
+        // 使用简单工厂，方式2
+        Car audi1 = SimpleFactory.getAudi();
+        Car benz1 = SimpleFactory.getBenz();
         audi1.run();
         benz1.run();
-
-
     }
-
 }

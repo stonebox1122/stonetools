@@ -1,5 +1,9 @@
 package com.stone.algorithm.recursion;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author stone
  * @date 2019/6/4 16:26
@@ -39,7 +43,20 @@ public class Recursion {
     }
 
     public static void main(String[] args) {
-        System.out.println(fibonacci(7));
-        hanoi(3, 'a', 'b', 'c');
+        //System.out.println(fibonacci(7));
+        //hanoi(3, 'a', 'b', 'c');
+        System.out.println(getRow(3));
+    }
+
+    public static List<Integer> getRow(int rowIndex) {
+        Integer[] list = new Integer[rowIndex + 1];
+        Arrays.fill(list, 0);
+        list[0] = 1;
+        for (int i = 1; i <= rowIndex; i++) {
+            for (int j = i; j > 0; j--) {
+                list[j] = list[j] + list[j - 1];
+            }
+        }
+        return Arrays.asList(list);
     }
 }

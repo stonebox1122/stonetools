@@ -15,6 +15,8 @@ public class BinarySearch {
         System.out.println(result);
         List<Integer> list = binarySearch2(arr, 0, arr.length - 1, 8);
         System.out.println(list);
+        int[] arr1 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 8, 8};
+        System.out.println(BinarySearch(arr1,8));
     }
 
     /**
@@ -43,6 +45,7 @@ public class BinarySearch {
 
     /**
      * 找到所有的元素
+     *
      * @param arr
      * @param left
      * @param right
@@ -93,5 +96,29 @@ public class BinarySearch {
 
             return list;
         }
+    }
+
+    /**
+     * 二分查找，非递归
+     *
+     * @param arr
+     * @param value
+     * @return
+     */
+    public static int BinarySearch(int[] arr, int value) {
+        int left = 0;
+        int right = arr.length - 1;
+        int mid;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            if (arr[mid] == value) {
+                return mid;
+            } else if (arr[mid] > value) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
     }
 }

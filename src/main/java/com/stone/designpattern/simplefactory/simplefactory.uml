@@ -3,66 +3,69 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="96.0" y="81.0">com.stone.simplefactory.Audi</node>
-    <node x="62.375" y="162.0">com.stone.simplefactory.SimpleFactory</node>
-    <node x="87.125" y="243.0">com.stone.simplefactory.SimpleFactoryTest</node>
-    <node x="126.4375" y="0.0">com.stone.simplefactory.Car</node>
-    <node x="0.0" y="81.0">com.stone.simplefactory.Benz</node>
+    <node x="0.0" y="104.0">com.stone.designpattern.simplefactory.Audi</node>
+    <node x="142.0" y="104.0">com.stone.designpattern.simplefactory.Benz</node>
+    <node x="126.97916666666666" y="208.0">com.stone.designpattern.simplefactory.SimpleFactory</node>
+    <node x="152.72916666666666" y="335.0">com.stone.designpattern.simplefactory.SimpleFactoryTest</node>
+    <node x="173.05208333333331" y="0.0">com.stone.designpattern.simplefactory.Car</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.stone.simplefactory.SimpleFactoryTest" target="com.stone.simplefactory.SimpleFactory">
-      <point x="-38.25" y="-15.5" />
-      <point x="125.375" y="218.0" />
-      <point x="126.875" y="218.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.SimpleFactoryTest" target="com.stone.designpattern.simplefactory.Car">
+      <point x="43.24999999999999" y="-27.0" />
+      <point x="282.47916666666663" y="310.0" />
+      <point x="290.63541666666663" y="310.0" />
+      <point x="290.63541666666663" y="79.0" />
+      <point x="279.8020833333333" y="79.0" />
+      <point x="45.75" y="27.0" />
     </edge>
-    <edge source="com.stone.simplefactory.SimpleFactory" target="com.stone.simplefactory.Benz">
-      <point x="-43.0" y="-15.5" />
-      <point x="83.875" y="137.0" />
-      <point x="38.0" y="137.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.Audi" target="com.stone.designpattern.simplefactory.Car">
+      <point x="0.0" y="-27.0" />
+      <point x="61.0" y="79.0" />
+      <point x="188.30208333333331" y="79.0" />
+      <point x="-45.75" y="27.0" />
     </edge>
-    <edge source="com.stone.simplefactory.SimpleFactoryTest" target="com.stone.simplefactory.Car">
-      <point x="38.25" y="-15.5" />
-      <point x="201.875" y="218.0" />
-      <point x="205.6875" y="218.0" />
-      <point x="205.6875" y="51.0" />
-      <point x="185.9375" y="51.0" />
-      <point x="25.5" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.SimpleFactory" target="com.stone.designpattern.simplefactory.Audi">
+      <point x="-48.33333333333334" y="-38.5" />
+      <point x="151.14583333333331" y="183.0" />
+      <point x="61.0" y="183.0" />
+      <point x="0.0" y="27.0" />
     </edge>
-    <edge source="com.stone.simplefactory.Benz" target="com.stone.simplefactory.Car">
-      <point x="0.0" y="-15.5" />
-      <point x="38.0" y="51.0" />
-      <point x="134.9375" y="51.0" />
-      <point x="-25.5" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.Benz" target="com.stone.designpattern.simplefactory.Car">
+      <point x="0.0" y="-27.0" />
+      <point x="203.0" y="79.0" />
+      <point x="218.80208333333331" y="79.0" />
+      <point x="-15.25" y="27.0" />
     </edge>
-    <edge source="com.stone.simplefactory.Audi" target="com.stone.simplefactory.Car">
-      <point x="0.0" y="-15.5" />
-      <point x="133.0" y="61.0" />
-      <point x="151.9375" y="61.0" />
-      <point x="-8.5" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.SimpleFactory" target="com.stone.designpattern.simplefactory.Car">
+      <point x="48.33333333333334" y="-38.5" />
+      <point x="247.8125" y="183.0" />
+      <point x="274.75" y="183.0" />
+      <point x="274.75" y="79.0" />
+      <point x="249.30208333333331" y="79.0" />
+      <point x="15.25" y="27.0" />
     </edge>
-    <edge source="com.stone.simplefactory.SimpleFactory" target="com.stone.simplefactory.Car">
-      <point x="43.0" y="-15.5" />
-      <point x="169.875" y="137.0" />
-      <point x="188.1875" y="137.0" />
-      <point x="188.1875" y="61.0" />
-      <point x="168.9375" y="61.0" />
-      <point x="8.5" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.SimpleFactoryTest" target="com.stone.designpattern.simplefactory.SimpleFactory">
+      <point x="-43.25" y="-27.0" />
+      <point x="195.97916666666666" y="310.0" />
+      <point x="199.47916666666666" y="310.0" />
+      <point x="0.0" y="38.5" />
     </edge>
-    <edge source="com.stone.simplefactory.SimpleFactory" target="com.stone.simplefactory.Audi">
-      <point x="0.0" y="-15.5" />
-      <point x="126.875" y="137.0" />
-      <point x="133.0" y="137.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.simplefactory.SimpleFactory" target="com.stone.designpattern.simplefactory.Benz">
+      <point x="0.0" y="-38.5" />
+      <point x="199.47916666666666" y="183.0" />
+      <point x="203.0" y="183.0" />
+      <point x="0.0" y="27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="85.0" y="132.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="234.0" y="170.5" />
   <SelectedNodes>
-    <node>com.stone.simplefactory.Audi</node>
+    <node>com.stone.designpattern.simplefactory.Car</node>
   </SelectedNodes>
-  <Categories />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>

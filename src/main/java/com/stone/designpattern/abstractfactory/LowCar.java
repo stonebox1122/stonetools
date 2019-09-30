@@ -2,12 +2,12 @@ package com.stone.designpattern.abstractfactory;
 
 public class LowCar implements CarFactory {
     @Override
-    public EngineFactory createEngine() {
+    public LowEngine createEngine() {
         return new LowEngine();
     }
 
     @Override
-    public TyreFactory createTyre() {
+    public LowTyre createTyre() {
         return new LowTyre();
     }
 }

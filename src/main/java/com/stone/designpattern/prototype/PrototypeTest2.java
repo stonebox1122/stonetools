@@ -4,19 +4,24 @@ import java.util.Date;
 
 public class PrototypeTest2 {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Sheep2 dolly = new Sheep2("Dolly", new Date(1234564134L));
-        Sheep2 dolly1 = (Sheep2) dolly.clone();
-        dolly.setBirthday(new Date(341325341L));
-
+        Date date = new Date(1234564134L);
+        Sheep2 dolly = new Sheep2("Dolly", date);
         System.out.println(dolly);
         System.out.println(dolly.getName());
         System.out.println(dolly.getBirthday());
 
         System.out.println("====================");
 
-        dolly1.setName("Lily");
+        Sheep2 dolly1 = (Sheep2) dolly.clone();
         System.out.println(dolly1);
         System.out.println(dolly1.getName());
+        System.out.println(dolly1.getBirthday());
+
+        System.out.println("====================");
+
+        // 由于是深克隆，克隆的对象和被克隆的对象都指向了不同的Date（）对象，这里只会修改第一个对象的属性。
+        date.setTime(2345667878L);
+        System.out.println(dolly.getBirthday());
         System.out.println(dolly1.getBirthday());
     }
 }

@@ -3,98 +3,98 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="401.0" y="86.0">com.stone.factorymethod.CarFactory</node>
-    <node x="27.196969696969717" y="172.0">com.stone.factorymethod.BenzFactory</node>
-    <node x="0.0" y="91.0">com.stone.factorymethod.Benz</node>
-    <node x="183.6969696969697" y="253.0">com.stone.factorymethod.FactoryMethodTest</node>
-    <node x="199.15151515151516" y="172.0">com.stone.factorymethod.AudiFactory</node>
-    <node x="179.3181818181818" y="0.0">com.stone.factorymethod.Car</node>
-    <node x="227.0" y="91.0">com.stone.factorymethod.Audi</node>
+    <node x="243.98484848484847" y="0.0">com.stone.designpattern.factorymethod.Car</node>
+    <node x="143.0" y="114.0">com.stone.designpattern.factorymethod.CarFactory</node>
+    <node x="317.0" y="114.0">com.stone.designpattern.factorymethod.Benz</node>
+    <node x="294.530303030303" y="218.0">com.stone.designpattern.factorymethod.BenzFactory</node>
+    <node x="291.5" y="322.0">com.stone.designpattern.factorymethod.FactoryMethodTest</node>
+    <node x="53.96212121212125" y="218.0">com.stone.designpattern.factorymethod.AudiFactory</node>
+    <node x="0.0" y="114.0">com.stone.designpattern.factorymethod.Audi</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.stone.factorymethod.BenzFactory" target="com.stone.factorymethod.Benz">
-      <point x="-39.33333333333334" y="-15.5" />
-      <point x="46.863636363636374" y="147.0" />
-      <point x="38.0" y="147.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.Benz" target="com.stone.designpattern.factorymethod.Car">
+      <point x="0.0" y="-27.0" />
+      <point x="378.0" y="94.0" />
+      <point x="315.1515151515151" y="94.0" />
+      <point x="10.166666666666686" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.BenzFactory" target="com.stone.factorymethod.Car">
-      <point x="0.0" y="-15.5" />
-      <point x="86.5" y="61.0" />
-      <point x="196.3181818181818" y="61.0" />
-      <point x="-17.0" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.Audi" target="com.stone.designpattern.factorymethod.Car">
+      <point x="0.0" y="-27.0" />
+      <point x="61.0" y="74.0" />
+      <point x="254.15151515151516" y="74.0" />
+      <point x="-50.833333333333314" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.Benz" target="com.stone.factorymethod.Car">
-      <point x="0.0" y="-15.5" />
-      <point x="38.0" y="51.0" />
-      <point x="184.98484848484847" y="51.0" />
-      <point x="-28.333333333333343" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.BenzFactory" target="com.stone.designpattern.factorymethod.CarFactory">
+      <point x="-51.33333333333334" y="-27.0" />
+      <point x="320.1969696969697" y="193.0" />
+      <point x="258.5" y="193.0" />
+      <point x="38.5" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.AudiFactory" target="com.stone.factorymethod.CarFactory">
-      <point x="-38.66666666666666" y="-15.5" />
-      <point x="218.4848484848485" y="147.0" />
-      <point x="179.5" y="147.0" />
-      <point x="27.5" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.FactoryMethodTest" target="com.stone.designpattern.factorymethod.Car">
+      <point x="57.6666666666667" y="-27.0" />
+      <point x="435.6666666666667" y="297.0" />
+      <point x="473.02272727272725" y="297.0" />
+      <point x="473.02272727272725" y="74.0" />
+      <point x="355.81818181818176" y="74.0" />
+      <point x="50.833333333333314" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.Audi" target="com.stone.factorymethod.Car">
-      <point x="0.0" y="-15.5" />
-      <point x="264.0" y="71.0" />
-      <point x="218.9848484848485" y="71.0" />
-      <point x="5.666666666666686" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.BenzFactory" target="com.stone.designpattern.factorymethod.Benz">
+      <point x="0.0" y="-27.0" />
+      <point x="371.530303030303" y="193.0" />
+      <point x="378.0" y="193.0" />
+      <point x="0.0" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.FactoryMethodTest" target="com.stone.factorymethod.BenzFactory">
-      <point x="-53.33333333333334" y="-15.5" />
-      <point x="210.36363636363637" y="228.0" />
-      <point x="86.19696969696972" y="228.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.BenzFactory" target="com.stone.designpattern.factorymethod.Car">
+      <point x="51.33333333333334" y="-27.0" />
+      <point x="422.8636363636364" y="193.0" />
+      <point x="452.0" y="193.0" />
+      <point x="452.0" y="84.0" />
+      <point x="335.48484848484844" y="84.0" />
+      <point x="30.5" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.FactoryMethodTest" target="com.stone.factorymethod.AudiFactory">
-      <point x="0.0" y="-15.5" />
-      <point x="263.6969696969697" y="228.0" />
-      <point x="257.1515151515152" y="228.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.FactoryMethodTest" target="com.stone.designpattern.factorymethod.AudiFactory">
+      <point x="-57.66666666666663" y="-27.0" />
+      <point x="320.33333333333337" y="297.0" />
+      <point x="130.96212121212125" y="297.0" />
+      <point x="0.0" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.BenzFactory" target="com.stone.factorymethod.CarFactory">
-      <point x="39.333333333333314" y="-15.5" />
-      <point x="125.53030303030303" y="147.0" />
-      <point x="124.5" y="147.0" />
-      <point x="-27.5" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.CarFactory" target="com.stone.designpattern.factorymethod.Car">
+      <point x="0.0" y="-27.0" />
+      <point x="220.0" y="94.0" />
+      <point x="294.81818181818176" y="94.0" />
+      <point x="-10.166666666666686" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.CarFactory" target="com.stone.factorymethod.Car">
-      <point x="0.0" y="-15.5" />
-      <point x="152.0" y="71.0" />
-      <point x="207.65151515151516" y="71.0" />
-      <point x="-5.666666666666657" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.AudiFactory" target="com.stone.designpattern.factorymethod.Car">
+      <point x="0.0" y="-27.0" />
+      <point x="130.96212121212125" y="193.0" />
+      <point x="132.5" y="193.0" />
+      <point x="132.5" y="84.0" />
+      <point x="274.48484848484844" y="84.0" />
+      <point x="-30.5" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.AudiFactory" target="com.stone.factorymethod.Car">
-      <point x="38.66666666666665" y="-15.5" />
-      <point x="295.8181818181818" y="147.0" />
-      <point x="316.1969696969697" y="147.0" />
-      <point x="316.1969696969697" y="61.0" />
-      <point x="230.3181818181818" y="61.0" />
-      <point x="17.0" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.FactoryMethodTest" target="com.stone.designpattern.factorymethod.BenzFactory">
+      <point x="0.0" y="-27.0" />
+      <point x="378.0" y="297.0" />
+      <point x="371.530303030303" y="297.0" />
+      <point x="0.0" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.AudiFactory" target="com.stone.factorymethod.Audi">
-      <point x="0.0" y="-15.5" />
-      <point x="257.1515151515152" y="147.0" />
-      <point x="264.0" y="147.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.AudiFactory" target="com.stone.designpattern.factorymethod.Audi">
+      <point x="-51.33333333333337" y="-27.0" />
+      <point x="79.62878787878788" y="193.0" />
+      <point x="61.0" y="193.0" />
+      <point x="0.0" y="27.0" />
     </edge>
-    <edge source="com.stone.factorymethod.FactoryMethodTest" target="com.stone.factorymethod.Car">
-      <point x="53.333333333333314" y="-15.5" />
-      <point x="317.030303030303" y="228.0" />
-      <point x="336.91666666666663" y="228.0" />
-      <point x="336.91666666666663" y="51.0" />
-      <point x="241.65151515151516" y="51.0" />
-      <point x="28.333333333333343" y="15.5" />
+    <edge source="com.stone.designpattern.factorymethod.AudiFactory" target="com.stone.designpattern.factorymethod.CarFactory">
+      <point x="51.333333333333314" y="-27.0" />
+      <point x="-38.5" y="27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="127.0" y="172.5" />
-  <SelectedNodes>
-    <node>com.stone.factorymethod.CarFactory</node>
-  </SelectedNodes>
-  <Categories />
+  <settings layout="Hierarchic Group" zoom="1.0" x="251.5" y="209.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>
